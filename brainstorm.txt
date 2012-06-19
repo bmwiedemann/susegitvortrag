@@ -59,6 +59,71 @@ Branch master set up to track remote branch master from origin by rebasing.
 
 
 
+#########################################################
+
+Notizen aus verschiedenen Rants
+
+überzeugen von git, warum brauchen wir git - wir wollen nur arbeiten
+  'Linus nutzt es und hat es geschrieben' ist ja sehr schön, aber kein Argument.
+  Feature: Laptop in der Bahn, mobile commits: kein Laptop, kein Bahnfahrer -> kein Vorteil
+    (kein offline/in der Freizeit-Arbeiter)
+  lokale repos stellen für die tägliche Arbeit keinen Vorteil dar
+  lokal (ohne Netz) konnte ich auch schon mit svn arbeiten, nur commit (git: push) geht nicht
+    aber das ist bei git genauso, es wurde lediglich umdefiniert was ein Commit ist.
+  in welchen use-cases hat git einen Vorteil gegenüber svn?
+  was macht git einfacher? was macht es bei meiner täglichen Arbeit einfacher/schneller/besser
+  Welche Vorteile von git sind es wert die neue Komplexität von git in Kauf zu nehmen?
+  md5-Summen konnte ich früher (als noch svn war) auch machen, auch konnte ich leicht einen
+    Patch auf mehrere Branches verteilen:
+    wie hilft mir die Andersartigkeit von git das besser zu machen?
+
+täglich ist das Repo in einem komischen Zustand, den ich nicht verstehe
+  dann mach ich lieber: git diff > ../patchfile ; rm -rf ; git clone ; patch
+  weil ich nicht verstehe was kaputt ist, und es auch gar nicht wissen will
+
+das push-zeit-fenster muss sehr klein gehalten werden, da man sonst in inkonsistenten Zustand kommt
+  das führt zu pull-push-Stress - wenn dann noch ein Konflikt kommt gebe ich auf
+  kurz: die Funktionen von pull, fetch, push, merge, rebase sind unklar
+
+ich will git nicht verstehen, sondern ich will damit arbeiten, wie früher mit svn
+  -> mögliche Antwort: egit
+
+git-Versteher können gut zusammenarbeiten
+  alle anderen werden dabei geschickt außenvor gelassen, weil sie erst gar
+  nicht produktiv mitarbeiten können
+
+Generelle Anliegen:
+  git output verstehen
+  was bedeuten all die komischen prüfsummen und was kann ich damit anfangen?
+
+github:
+  auflisten MEINER (offenen) pull requests -> ???
+    es ist nicht möglich den Status meiner pull requests zu überwachen, das erschwert
+    die Arbeit als Maintainer massiv.
+  auflisten der offenen pull requests pro repo
+    -> https://github.com/organizations/libyui/dashboard/pulls
+
+
+
+Zitat:
+  "Konsistenz ist ein Konzept das in git nicht vorgesehen ist." (H. Mantel)
+
+Beispiel Meldung (erfunden):
+  push failed ..?.. 7837bb ..?.. -> unklar was der Rest aussagt
+  Folgerung: git repo ist kaputt -> rm -rf ; git clone
+
+
+
+Idee:
+  script für tagging Funktion wie beim alten "y2tool tagversion"
+    ->  git tag $TAGNAME; git push origin +$TAGNAME
+
+
+------
+
 Resources:
 http://de.contaowiki.org/Core_Forking_-_best_practice
+
+Github Criticism:
+http://zbowling.github.com/blog/2011/11/25/github/
 
