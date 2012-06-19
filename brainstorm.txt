@@ -1,0 +1,30 @@
+full repo - not just a checkout => no network needed (except fetch/pull +push)
+index ; git add ; git diff --cached
+output im Erfolgsfalle
+local vs remote branches
+commits are good
+tags+branches+merges are fast+cheap
+how to resolve conflicts
+make a branch from an earlier point in history
+rewriting history ; amend, rebase, cherry-pick
+rebase
+git revert
+show webyast git history with merge commits => solution autosetuprebase = always
+
+pull requests
+multiple remotes
+git push origin +TAGNAME
+
+show effect of checkout, branch, merge, rebase, cherry-pick, reset --hard, ... with gitk --all
+
+
+best practices .gitconfig:
+
+[branch]
+    autosetuprebase = always
+[push]
+    default = current
+[user]
+    name = J. Doe Schmidt
+    email = jdoesn@example.com
+
