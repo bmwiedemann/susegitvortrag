@@ -28,3 +28,23 @@ best practices .gitconfig:
     name = J. Doe Schmidt
     email = jdoesn@example.com
 
+Example:
+bwiedemann@bernhard:~/temp> mkdir susegitvortrag
+bwiedemann@bernhard:~/temp> cd susegitvortrag/
+bwiedemann@bernhard:~/temp/susegitvortrag> git init
+Initialized empty Git repository in /home/bernhard/temp/susegitvortrag/.git/
+bwiedemann@bernhard:~/temp/susegitvortrag> gvim brainstorm.txt
+bwiedemann@bernhard:~/temp/susegitvortrag> git add brainstorm.txt
+bwiedemann@bernhard:~/temp/susegitvortrag> git commit -m "add first ideas"
+[master (root-commit) 8c50ad9] add first ideas
+ 1 files changed, 30 insertions(+), 0 deletions(-)
+ create mode 100644 brainstorm.txt
+# edited some more...
+bwiedemann@bernhard:~/temp/susegitvortrag> git add brainstorm.txt
+bwiedemann@bernhard:~/temp/susegitvortrag> git commit --amend -m "add first ideas"
+[master 6026b12] add first ideas
+ 1 files changed, 30 insertions(+), 0 deletions(-)
+ create mode 100644 brainstorm.txt
+bwiedemann@bernhard:~/temp/susegitvortrag> git commit -a -m "first example"
+
+
