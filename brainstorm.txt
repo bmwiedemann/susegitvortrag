@@ -46,5 +46,13 @@ bwiedemann@bernhard:~/temp/susegitvortrag> git commit --amend -m "add first idea
  1 files changed, 30 insertions(+), 0 deletions(-)
  create mode 100644 brainstorm.txt
 bwiedemann@bernhard:~/temp/susegitvortrag> git commit -a -m "first example"
-
-
+bwiedemann@bernhard:~/temp/susegitvortrag> git remote add origin git@github.com:bmwiedemann/susegitvortrag.git
+bwiedemann@bernhard:~/temp/susegitvortrag> git push -u origin master
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 1.13 KiB, done.
+Total 6 (delta 1), reused 0 (delta 0)
+To git@github.com:bmwiedemann/susegitvortrag.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin by rebasing.
