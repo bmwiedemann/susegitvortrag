@@ -56,3 +56,9 @@ Total 6 (delta 1), reused 0 (delta 0)
 To git@github.com:bmwiedemann/susegitvortrag.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin by rebasing.
+
+
+
+Resources:
+http://de.contaowiki.org/Core_Forking_-_best_practice
+
