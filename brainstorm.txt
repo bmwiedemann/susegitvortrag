@@ -28,6 +28,9 @@ best practices .gitconfig:
     name = J. Doe Schmidt
     email = jdoesn@example.com
 
+bashrc prompt expand
+
+
 Example:
 bwiedemann@bernhard:~/temp> mkdir susegitvortrag
 bwiedemann@bernhard:~/temp> cd susegitvortrag/
@@ -69,9 +72,9 @@ Notizen aus verschiedenen Rants
     (kein offline/in der Freizeit-Arbeiter)
   lokale repos stellen für die tägliche Arbeit keinen Vorteil dar
   lokal (ohne Netz) konnte ich auch schon mit svn arbeiten, nur commit (git: push) geht nicht
-    aber das ist bei git genauso, es wurde lediglich umdefiniert was ein Commit ist.
+    aber das ist bei git genauso, es wurde lediglich umdefiniert was ein Commit ist. [svn log ; svn blame etc braucht Netz]
   in welchen use-cases hat git einen Vorteil gegenüber svn?
-  was macht git einfacher? was macht es bei meiner täglichen Arbeit einfacher/schneller/besser
+  was macht git einfacher? was macht es bei meiner täglichen Arbeit einfacher/schneller/besser [status ; git add --patch ; cherry-pick]
   Welche Vorteile von git sind es wert die neue Komplexität von git in Kauf zu nehmen?
   md5-Summen konnte ich früher (als noch svn war) auch machen, auch konnte ich leicht einen
     Patch auf mehrere Branches verteilen:
@@ -94,13 +97,14 @@ git-Versteher können gut zusammenarbeiten
 
 Generelle Anliegen:
   git output verstehen
-  was bedeuten all die komischen prüfsummen und was kann ich damit anfangen?
+  was bedeuten all die komischen prüfsummen und was kann ich damit anfangen? [checkout,merge,cherry-pick]
+  warum sind die SHA1sums manchmal abgekuerzt
 
 github:
   auflisten MEINER (offenen) pull requests -> ???
     es ist nicht möglich den Status meiner pull requests zu überwachen, das erschwert
     die Arbeit als Maintainer massiv.
-  auflisten der offenen pull requests pro repo
+  auflisten der offenen pull requests pro organisation
     -> https://github.com/organizations/libyui/dashboard/pulls
 
 
