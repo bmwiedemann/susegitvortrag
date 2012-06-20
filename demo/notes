@@ -1,0 +1,151 @@
+
+cd presentation
+gitg
+
+
+---------------------------
+
+A
+git config --global user.name "Alice Anderson"
+git config --global user.email alice@example.com
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.status auto
+mkdir gitdemorepo
+cd gitdemorepo
+git init
+gitg >/dev/null 2>&1 &
+gvim brainstorm.txt
+git status
+git add brainstorm.txt
+git commit -m "add first ideas"
+gvim brainstorm.txt
+git add brainstorm.txt
+git commit --amend -m "add first ideas"
+git remote add origin git@github.com:bmwiedemann/gitdemorepo.git
+git push -u origin master
+
+
+B
+git config --global user.name "Bob Barr"
+git config --global user.email bob@example.com
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.status auto
+git clone git@github.com:bmwiedemann/gitdemorepo.git
+cd gitdemorepo
+gitg >/dev/null 2>&1 &
+gvim brainstorm.txt
+git add brainstorm.txt
+git commit -m "bobs comments"
+git push
+
+
+
+A
+gvim brainstorm.txt
+# second idea
+git diff
+git add brainstorm.txt
+git diff
+git diff --cached
+git commit -m "second idea"
+git push
+# Error: not-ff
+git pull --rebase
+# you can configure to automatically rebase always
+git config --global branch.autosetuprebase always
+gvim brainstorm.txt
+git commit -a -m "comment bobs comments"
+git push
+
+
+
+B
+gvim brainstorm.txt
+# changes that conflict with A (with error)
+git add brainstorm.txt
+git commit -m "more bobs changes"
+git push
+# Error: not-ff
+git pull --rebase
+# Error: conflict
+gvim brainstorm.txt
+git commit -a
+git push
+# - lets release version 1.0
+git tag version1.0
+git push origin +version1.0
+git checkout -b stable
+git push -u origin stable
+git checkout master
+gvim tool.sh
+# grep for wrong word (error)
+git add tool.sh
+git commit -m "great new tool"
+gvim brainstorm.txt
+# make hotfix for error
+git commit -a
+git checkout stable
+git cherry-pick master
+git reset --hard HEAD^
+git cherry-pick $SHA1
+git push
+# pushes all branches!
+# you can disable this in the config:
+git config --global push.default current
+
+
+A
+# learned: pull before you start
+git pull
+git checkout -b feature1
+gvim tool.sh
+git commit -a
+git checkout -b feature2 master
+gvim tool.sh
+# change with error!
+git commit -a -m "feature 2"
+gvim tool.sh
+git commit -a -m "extend feature 2"
+gvim tool.sh
+git commit -a -m "!fixup feature 2"
+git tag backup
+git rebase --interactive --autosquash HEAD~3
+git tag feature2-ready
+??git push origin +feature2-ready
+git tag -d backup
+# important master work:
+git checkout master
+gvim brainstorm.txt
+git commit -a -m "important change"
+gvim brainstorm.txt
+git commit -a -m "another important change"
+git push
+# NOTE: pushes all branches!
+git push origin +feature2-ready
+
+
+
+B
+git checkout master
+# alternative to pull use fetch:
+git fetch
+git checkout feature2
+./tool.sh
+git checkout master
+git fetch
+git merge origin master
+git merge feature2
+
+
+
+
+
+
+
+#####################################################
+# github fork to jdsn
+git clone git@github.com:jdsn/gitdemorepo.git
+
+git remote add alice git://github.com/bmwiedemann/gitdemorepo.git

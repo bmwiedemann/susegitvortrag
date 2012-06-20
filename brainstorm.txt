@@ -11,11 +11,24 @@ rebase
 git revert
 show webyast git history with merge commits => solution autosetuprebase = always
 
+delete remote branch
+  git push origin :branchname
+  git push origin --delete branchname
+
+push tag
+  git push --tags  (all tags)
+  git push origin +tagname  (single tag)
+
 pull requests
 multiple remotes
 git push origin +TAGNAME
 
 show effect of checkout, branch, merge, rebase, cherry-pick, reset --hard, ... with gitk --all
+                   X        X      X       X         X            X                     Y
+
+
+
+Git was originally designed as a low-level version control system engine on top of which others could write front ends, such as Cogito or StGIT.[21] However, the core Git project has since become a complete revision control system that is usable directly.
 
 
 best practices .gitconfig:
@@ -130,4 +143,7 @@ http://de.contaowiki.org/Core_Forking_-_best_practice
 
 Github Criticism:
 http://zbowling.github.com/blog/2011/11/25/github/
+
+The problem of SVN
+http://wildfalcon.com/archives/2008/05/05/best-practice-work-flow-with-git/
 
