@@ -15,10 +15,27 @@ git init
 git checkout -b U3
 add Gustav-Adolf-Straße
 git tag U3-start
-for s in Sündersbühl Rothenburger Plärrer Opernhaus ; do
+for s in Sündersbühl Rothenburger ; do
 	add $s
 done
-git checkout -b U1 Plärrer
+git checkout --orphan U1
+for s in Hardhöhe Klinikum Stadthalle Rathaus Fürth_Hauptbahnhof Jakobinenstraße etc Gostenhof; do
+	add $s
+done
+
+
+#git checkout --orphan U2
+#for s in Röthenbach usw St.Leonhard; do
+#	add $s
+#done
+
+
+git merge U3 -m "Plärrer"
+git tag Plärrer
+git checkout U3
+git merge Plärrer
+add Opernhaus
+git checkout U1
 add Weißer_Turm
 add Lorenzkirche
 git merge U3 -m "Hauptbahnhof"
