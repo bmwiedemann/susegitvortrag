@@ -1,0 +1,2 @@
+all:
+	./ubahn.sh
