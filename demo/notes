@@ -99,8 +99,11 @@ git config --global push.default current
 A
 # learned: pull before you start
 git pull
-git checkout -b feature1
 gvim tool.sh
+# start change
+git stash
+git checkout -b feature1
+git stash pop
 git commit -a
 git checkout -b feature2 master
 gvim tool.sh
