@@ -147,3 +147,4 @@ http://zbowling.github.com/blog/2011/11/25/github/
 The problem of SVN
 http://wildfalcon.com/archives/2008/05/05/best-practice-work-flow-with-git/
 
+http://people.gnome.org/~newren/eg/ (bug: needs LANG=C )
