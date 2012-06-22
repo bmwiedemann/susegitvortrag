@@ -147,4 +147,7 @@ http://zbowling.github.com/blog/2011/11/25/github/
 The problem of SVN
 http://wildfalcon.com/archives/2008/05/05/best-practice-work-flow-with-git/
 
+git-new-workdir
+  http://git.kernel.org/?p=git/git.git;a=blob_plain;f=contrib/workdir/git-new-workdir;hb=HEAD
+
 http://people.gnome.org/~newren/eg/ (bug: needs LANG=C )
