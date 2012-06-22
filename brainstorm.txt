@@ -126,4 +126,7 @@ http://de.contaowiki.org/Core_Forking_-_best_practice
 Github Criticism:
 http://zbowling.github.com/blog/2011/11/25/github/
 
+git-new-workdir
+  http://git.kernel.org/?p=git/git.git;a=blob_plain;f=contrib/workdir/git-new-workdir;hb=HEAD
+
 
